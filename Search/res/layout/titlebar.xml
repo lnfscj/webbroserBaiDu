@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_margin="5dp"
+		android:focusable="false"
+        android:gravity="center_vertical">
+        <EditText 
+            android:id="@+id/search"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:text="http://"
+            android:drawableEnd="@drawable/url_img_refresh"
+            android:focusable="false"
+            android:focusableInTouchMode="false"  
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_search"
+            android:paddingLeft="5dp"
+            android:layout_alignParentLeft ="true">
+        </EditText>
+        <TextView 
+            android:id="@+id/url_open_page"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center"
+            android:background="@drawable/url_img_open_page"
+            android:layout_alignParentRight="true"/>
+        
+        
+    </RelativeLayout>
+</LinearLayout>

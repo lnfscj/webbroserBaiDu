@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="action_mode_share_drawable" format="reference" />
+    <attr name="action_mode_web_search_drawable" format="reference" />
+    <attr name="direction">
+        <enum name="bottomToTop" value="1" />
+        <enum name="leftToRight" value="2" />
+        <enum name="rightToLeft" value="0" />
+        <enum name="topToBottom" value="3" />
+    </attr>
+    <attr name="menuDrawerStyle" format="reference" />
+    <attr name="select_dialog_multichoice" format="reference" />
+    <attr name="select_dialog_singlechoice" format="reference" />
+    <attr name="imageAspectRatioAdjust">
+        <enum name="adjust_height" value="2" />
+        <enum name="adjust_width" value="1" />
+        <enum name="none" value="0" />
+    </attr>
+    <attr name="imageAspectRatio" format="float" />
+    <attr name="circleCrop" format="boolean" />
+    <attr name="mapType">
+        <enum name="none" value="0" />
+        <enum name="hybrid" value="4" />
+        <enum name="normal" value="1" />
+        <enum name="satellite" value="2" />
+        <enum name="terrain" value="3" />
+    </attr>
+    <attr name="cameraBearing" format="float" />
+    <attr name="cameraTargetLat" format="float" />
+    <attr name="cameraTargetLng" format="float" />
+    <attr name="cameraTilt" format="float" />
+    <attr name="cameraZoom" format="float" />
+    <attr name="liteMode" format="boolean" />
+    <attr name="uiCompass" format="boolean" />
+    <attr name="uiRotateGestures" format="boolean" />
+    <attr name="uiScrollGestures" format="boolean" />
+    <attr name="uiTiltGestures" format="boolean" />
+    <attr name="uiZoomControls" format="boolean" />
+    <attr name="uiZoomGestures" format="boolean" />
+    <attr name="useViewLifecycle" format="boolean" />
+    <attr name="zOrderOnTop" format="boolean" />
+    <attr name="uiMapToolbar" format="boolean" />
+    <attr name="mdContentBackground" format="reference" />
+    <attr name="mdMenuBackground" format="reference" />
+    <attr name="mdMenuSize" format="dimension" />
+    <attr name="mdActiveIndicator" format="reference" />
+    <attr name="mdDropShadowEnabled" format="boolean" />
+    <attr name="mdDropShadowSize" format="dimension" />
+    <attr name="mdDropShadowColor" format="color" />
+    <attr name="mdDropShadow" format="reference" />
+    <attr name="mdTouchBezelSize" format="dimension" />
+    <attr name="mdAllowIndicatorAnimation" format="boolean" />
+    <attr name="mdMaxAnimationDuration" format="integer" />
+    <attr name="mdSlideDrawable" format="reference" />
+    <attr name="mdDrawerOpenUpContentDescription" format="string" />
+    <attr name="mdDrawerClosedUpContentDescription" format="string" />
+    <attr name="mdDrawOverlay" format="boolean" />
+    <attr name="mdPosition">
+        <enum name="bottom" value="3" />
+        <enum name="left" value="0" />
+        <enum name="right" value="2" />
+        <enum name="top" value="1" />
+    </attr>
+    <attr name="text" format="string" />
+    <attr name="hint" format="string" />
+    <attr name="is_password" format="boolean" />
+    <attr name="max_length" format="string" />
+    <attr name="keyboard" format="string" />
+    <attr name="is_show_forgot" format="boolean" />
+    <attr name="maxWidth" format="dimension" />
+    <attr name="padding_top" format="string" />
+    <attr name="padding_bottom" format="string" />
+    <attr name="label" format="string" />
+    <attr name="checkdefault" format="boolean" />
+    <attr name="nClick" format="string" />
+    <attr name="key" format="string" />
+    <attr name="refreshOnResume" format="string" />
+    <attr name="onPrefClick" format="string" />
+</resources>

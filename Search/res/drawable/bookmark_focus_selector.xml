@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:variablePadding="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/list_press" />
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/list_press" />
+    <item android:state_focused="true" android:state_selected="false" android:drawable="@drawable/list_high" />
+    <item android:state_focused="false" android:state_selected="false" android:drawable="@drawable/transparent" />
+    <item android:drawable="@drawable/transparent" />
+</selector>

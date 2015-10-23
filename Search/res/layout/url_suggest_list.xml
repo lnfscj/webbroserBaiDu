@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    android:id="@+id/url_suggest"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout 
+        android:orientation="vertical" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent">
+        <RelativeLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="40.0dip">
+            <LinearLayout 
+                android:layout_width="fill_parent" 
+                android:layout_height="fill_parent">
+                <TextView
+                    android:textSize="16.0dip" 
+                    android:textColor="@color/selector_url_suggest_tab_title" 
+                    android:gravity="center" 
+                    android:id="@+id/tab_inputted" 
+                    android:background="@drawable/selector_url_suggest_tab" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="fill_parent" 
+                    android:text="搜索历史" 
+                    android:layout_weight="1.0" />
+                <TextView 
+                    android:textSize="16.0dip" 
+                    android:textColor="@color/selector_url_suggest_tab_title" 
+                    android:gravity="center" android:id="@+id/tab_favorite" 
+                    android:background="@drawable/selector_url_suggest_tab" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="fill_parent" 
+                    android:text="感兴趣的" 
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+            <View 
+                android:background="#ffbdbdbd" 
+                android:layout_width="fill_parent" 
+                android:layout_height="0.5dip" />
+        </RelativeLayout>
+        <RelativeLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"  
+           >
+           		<RelativeLayout 
+           		    android:id="@+id/searchedSite"
+           		    android:layout_width="match_parent"
+           		    android:layout_height="match_parent"
+           		    android:background="#ffffffff"           		    
+           		    android:layout_centerInParent="true">
+           		     <ListView 
+                    android:id="@+id/url_suggest_list_view" 
+                    android:background="#ffffffff" 
+                    android:fadingEdge="none" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="fill_parent" 
+                    android:cacheColorHint="#ffffffff" 
+                    android:divider="#fff8f8f8" 
+                    android:dividerHeight="1.0dip" /> 
+                    <TextView 
+	                android:id="@+id/search_hint"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"               
+	                android:textSize="18.0dip" 
+	                android:textColor="#ffbdbdbd"
+	                android:layout_centerInParent="true"
+	                android:text="搜索记录为空"/>
+           		</RelativeLayout>
+                
+                <TextView 
+                    android:id="@+id/favouriteSite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffffff"
+                    android:text="hahhahah"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>             
+           
+            	
+        </RelativeLayout>
+    </LinearLayout>
+    <ListView 
+        android:id="@+id/list_suggest" 
+        android:background="#ffffffff" 
+        android:visibility="gone" 
+        android:fadingEdge="none" 
+        android:clickable="true" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:cacheColorHint="#fff4f6f7" 
+        android:divider="#fff8f8f8" 
+        android:dividerHeight="1.0dip" />
+</FrameLayout>

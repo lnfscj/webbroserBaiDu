@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+     <include layout="@layout/url_input_titlebar" android:layout_width="fill_parent" android:layout_height="@dimen/webview_titlebar_height" android:layout_alignParentTop="true"/>
+    <FrameLayout 
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/url_input_titlebar">
+        <include layout="@layout/url_suggest_list"/> 
+ 
+        <LinearLayout 
+            android:id="@+id/web_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+ 			android:visibility="gone">
+            <ProgressBar 
+                android:id="@+id/progress_bar" 
+                android:layout_width="fill_parent" 
+                android:layout_height="2.0dip" 
+                android:max="100" 
+                android:progress="50" 
+                android:progressDrawable="@drawable/inapp_progress" 
+                style="?android:attr/progressBarStyleHorizontal" />
+
+			<WebView 
+			    android:id="@+id/web_page"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:background="@color/bg_color"
+			    />
+        </LinearLayout>
+    </FrameLayout>
+
+    
+<include layout="@layout/url_input_footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

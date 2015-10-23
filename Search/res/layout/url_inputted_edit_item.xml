@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_horizontal" android:id="@+id/layout_select" android:layout_width="53.329987dip" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <CheckBox android:id="@+id/check_select" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="12.669983dip" android:textColor="#ff888b92" android:id="@+id/text_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="12.0dip" android:text="date" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="65.32999dip" android:layout_toLeftOf="@id/text_date" android:layout_toRightOf="@id/layout_select">
+        <TextView android:ellipsize="end" android:id="@+id/text_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" android:singleLine="true" style="@style/fontstyle_16_T13" />
+        <TextView android:ellipsize="end" android:id="@+id/text_url" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.669983dip" android:text="TextView" android:singleLine="true" style="@style/fontstyle_12_T7" />
+    </LinearLayout>
+</RelativeLayout>

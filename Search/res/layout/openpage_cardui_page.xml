@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="#ff1e1e1e" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+   
+    <LinearLayout 
+        android:orientation="vertical" 
+        android:id="@+id/openpageLayout" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent">
+        <RelativeLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="45.669983dip">
+            <LinearLayout 
+                android:gravity="center_vertical" 
+                android:orientation="horizontal" 
+                android:id="@+id/addNewPageButton" 
+                android:paddingLeft="5.0dip" 
+                android:paddingRight="5.0dip" 
+                android:clickable="true" 
+                android:layout_width="wrap_content" 
+                android:layout_height="33.329987dip" 
+                android:layout_marginLeft="8.0dip" 
+                android:layout_marginTop="7.3299866dip">
+                <ImageView 
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip" 
+                    android:src="@drawable/openpage_add_icon" />
+                <TextView 
+                    android:textSize="18.0dip" 
+                    android:textColor="#ffffffff" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="8.0dip" 
+                    android:layout_marginTop="-1.3299866dip" 
+                    android:text="添加" />
+            </LinearLayout>
+            <TextView 
+                
+                android:textSize="12.0dip" 
+                android:textColor="@color/color_openpage_count_text_selector" 
+                android:gravity="center" 
+                android:id="@+id/page_count_text" 
+                android:background="@drawable/btn_openpage_count" 
+                android:layout_width="40.0dip" 
+                android:layout_height="40.0dip" 
+                android:layout_marginTop="5.0dip" 
+                android:layout_marginRight="4.0dip" 
+                android:text="8" 
+                android:layout_alignParentRight="true" />
+            <ImageButton 
+                android:id="@+id/btn_openpage_history" 
+                android:background="@drawable/btn_openpage_history" 
+                android:layout_width="40.0dip" 
+                android:layout_height="40.0dip" android:layout_marginTop="5.0dip" 
+                android:layout_toLeftOf="@id/page_count_text" />
+        </RelativeLayout>
+         <FrameLayout
+	        android:id="@+id/contentview"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent" >
+     	</FrameLayout>
+ <!--        <com.app.view.CardContainerStack 
+            android:id="@+id/card_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal">
+            
+        </com.app.view.CardContainerStack>-->
+    </LinearLayout>
+    
+</FrameLayout>

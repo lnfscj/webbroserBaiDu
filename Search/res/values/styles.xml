@@ -1,0 +1,726 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <declare-styleable name="SlidingCard">
+        <attr name="sc_slidingMode">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="leftRight" value="2" />
+        </attr>
+        <attr name="sc_touchMode">
+            <enum name="none" value="0" />
+            <enum name="margin" value="1" />
+            <enum name="fullscreen" value="2" />
+        </attr>
+        <attr name="sc_viewContent" format="reference" />
+        <attr name="sc_leftShadowDrawable" format="reference" />
+        <attr name="sc_leftShadowWidth" format="dimension" />
+        <attr name="sc_rightShadowDrawable" format="reference" />
+        <attr name="sc_rightShadowWidth" format="dimension" />
+        <attr name="sc_leftFadeEnabled" format="boolean" />
+        <attr name="sc_leftFadeDegree" format="float" />
+        <attr name="sc_rightFadeEnabled" format="boolean" />
+        <attr name="sc_rightFadeDegree" format="float" />
+    </declare-styleable>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <!--  
+    <style name="Theme.NoActionbar" parent="Theme.AppCompat.Light.NoActionBar">
+        
+    </style>
+-->
+  	<style name="Common_Font_Style">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="Font_Keyword_Num_10_67" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Font_Keyword_Title_10_67" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ff306b0c</item>
+    </style>
+    <style name="Font_Keyword_Word_12" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff222226</item>
+    </style>
+    <style name="Font_Keyword_Word_15_33" parent="@style/Common_Font_Style">
+        <item name="android:textSize">15.329987dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowDy">1.0</item>
+    </style>
+    <style name="Font_Life_Search_11_33" parent="@style/Common_Font_Style">
+        <item name="android:textSize">11.329987dip</item>
+        <item name="android:textColor">#ffd0dae3</item>
+    </style>
+    <style name="Font_Notice_Widget_10_67" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">@drawable/widget_big_notice_font_selector</item>
+    </style>
+    <style name="Font_Notice_Widget_9_33" parent="@style/Common_Font_Style">
+        <item name="android:textSize">9.329987dip</item>
+        <item name="android:textColor">@drawable/widget_small_notice_font_selector</item>
+    </style>
+    <style name="Font_S_1200_80" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff808080</item>
+    </style>
+    <style name="Font_S_1333_4E" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ff4e4e4e</item>
+    </style>
+    <style name="Font_S_1467_27" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff272727</item>
+    </style>
+    <style name="Font_S_1467_42" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff424242</item>
+    </style>
+    <style name="Font_S_1467_4E" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff4e4e4e</item>
+    </style>
+    <style name="Font_S_1467_B" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="Font_S_16_54" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff545454</item>
+    </style>
+    <style name="Font_S_16_6" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff666666</item>
+    </style>
+    <style name="Font_S_16_B" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="Font_S_16_O" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ffff3902</item>
+    </style>
+    <style name="Font_S_16_R" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ffe01820</item>
+    </style>
+    <style name="Font_S_1733_27" parent="@style/Common_Font_Style">
+        <item name="android:textSize">17.329987dip</item>
+        <item name="android:textColor">#ff272727</item>
+    </style>
+    <style name="Font_S_1733_28" parent="@style/Common_Font_Style">
+        <item name="android:textSize">17.329987dip</item>
+        <item name="android:textColor">#ff282828</item>
+    </style>
+    <style name="Font_S_1733_4E" parent="@style/Common_Font_Style">
+        <item name="android:textSize">17.329987dip</item>
+        <item name="android:textColor">#ff4e4e4e</item>
+    </style>
+    <style name="Font_S_1733_6" parent="@style/Common_Font_Style">
+        <item name="android:textSize">17.329987dip</item>
+        <item name="android:textColor">#ff666666</item>
+    </style>
+    <style name="Font_S_1733_B" parent="@style/Common_Font_Style">
+        <item name="android:textSize">17.329987dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="Font_S_1733_O" parent="@style/Common_Font_Style">
+        <item name="android:textSize">17.329987dip</item>
+        <item name="android:textColor">#ffff3902</item>
+    </style>
+    <style name="Font_S_1867_W" parent="@style/Common_Font_Style">
+        <item name="android:textSize">18.669983dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Font_S_20_27" parent="@style/Common_Font_Style">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textColor">#ff272727</item>
+    </style>
+      <style name="fontstyle_10_67_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_10_67_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ff90908d</item>
+    </style>
+    <style name="fontstyle_10_67_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ff75787f</item>
+    </style>
+    <style name="fontstyle_10_67_T4" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ffacacac</item>
+    </style>
+    <style name="fontstyle_10_67_T5" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ff8c9092</item>
+    </style>
+    <style name="fontstyle_10_67_T6" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ff989a9d</item>
+    </style>
+    <style name="fontstyle_10_67_d9d9d9" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ffd9d9d9</item>
+    </style>
+    <style name="fontstyle_10_67_multi_w" parent="@style/Common_Font_Style">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ff3e4a58</item>
+    </style>
+    <style name="fontstyle_11_33_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">11.329987dip</item>
+        <item name="android:textColor">#ff282a2d</item>
+    </style>
+    <style name="fontstyle_11_33_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">11.329987dip</item>
+        <item name="android:textColor">#ff4b4b4b</item>
+    </style>
+    <style name="fontstyle_11_33_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">11.329987dip</item>
+        <item name="android:textColor">#ff2c7dc1</item>
+    </style>
+    <style name="fontstyle_11_33_T4" parent="@style/Common_Font_Style">
+        <item name="android:textSize">11.329987dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_11_33_T5" parent="@style/Common_Font_Style">
+        <item name="android:textSize">11.329987dip</item>
+        <item name="android:textColor">#ff7a7b7b</item>
+    </style>
+    <style name="fontstyle_12_67_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.669983dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_12_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_12_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ffacacac</item>
+    </style>
+    <style name="fontstyle_12_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ffb4b6bc</item>
+    </style>
+    <style name="fontstyle_12_T4" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff333333</item>
+    </style>
+    <style name="fontstyle_12_T5" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff9298a0</item>
+    </style>
+    <style name="fontstyle_12_T6" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ffffea00</item>
+    </style>
+    <style name="fontstyle_12_T7" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_12t_green">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff0f9908</item>
+    </style>
+    <style name="fontstyle_13_33_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ff898f97</item>
+    </style>
+    <style name="fontstyle_13_33_T10" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ff363636</item>
+    </style>
+    <style name="fontstyle_13_33_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ff383838</item>
+    </style>
+    <style name="fontstyle_13_33_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_13_33_T4" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#fffff600</item>
+    </style>
+    <style name="fontstyle_13_33_T5" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ff666666</item>
+    </style>
+    <style name="fontstyle_13_33_T6" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ffff0000</item>
+    </style>
+    <style name="fontstyle_13_33_T7" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ffb4b6bc</item>
+    </style>
+    <style name="fontstyle_13_33_T8" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_13_33_T9" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ffb2b9c6</item>
+    </style>
+    <style name="fontstyle_13t_bk">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_13t_record">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#ff3e4457</item>
+    </style>
+    <style name="fontstyle_13t_record_end">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#ff1fc009</item>
+    </style>
+    <style name="fontstyle_13t_recording">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#ffdc0616</item>
+    </style>
+    <style name="fontstyle_13t_wh">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_14_67_3d9e0f" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff3d9e0f</item>
+    </style>
+    <style name="fontstyle_14_67_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_14_67_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ffb2b2b2</item>
+    </style>
+    <style name="fontstyle_14_67_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff3d4451</item>
+    </style>
+    <style name="fontstyle_14_67_T4" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff8a8a8a</item>
+    </style>
+    <style name="fontstyle_14_67_T5" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff7e8389</item>
+    </style>
+    <style name="fontstyle_14_67_T6" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff666666</item>
+    </style>
+    <style name="fontstyle_14_67_T7" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff222222</item>
+    </style>
+    <style name="fontstyle_14_67_T8" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff43aaf9</item>
+    </style>
+    <style name="fontstyle_14_67_T9" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_14_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_14_T10" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff484d52</item>
+    </style>
+    <style name="fontstyle_14_T11" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff373737</item>
+    </style>
+    <style name="fontstyle_14_T12" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff353738</item>
+    </style>
+    <style name="fontstyle_14_T13" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff798289</item>
+    </style>
+    <style name="fontstyle_14_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff999999</item>
+    </style>
+    <style name="fontstyle_14_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ffff3902</item>
+    </style>
+    <style name="fontstyle_14_T4" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff696c76</item>
+    </style>
+    <style name="fontstyle_14_T5" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff666666</item>
+    </style>
+    <style name="fontstyle_14_T6" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff272727</item>
+    </style>
+    <style name="fontstyle_14_T7" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff2c7dc1</item>
+    </style>
+    <style name="fontstyle_14_T8" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff999999</item>
+    </style>
+    <style name="fontstyle_14_T9" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ffb2b9c6</item>
+    </style>
+    <style name="fontstyle_14t_gray">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff575757</item>
+    </style>
+    <style name="fontstyle_14t_gray_blue">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff697177</item>
+    </style>
+    <style name="fontstyle_14t_light_gray">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ffcbccce</item>
+    </style>
+    <style name="fontstyle_15_33_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">15.329987dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_15_33_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">15.329987dip</item>
+        <item name="android:textColor">#ff6a6e76</item>
+    </style>
+    <style name="fontstyle_15_33_T4" parent="@style/Common_Font_Style">
+        <item name="android:textSize">15.329987dip</item>
+        <item name="android:textColor">#ff272727</item>
+    </style>
+    <style name="fontstyle_15_33_T5" parent="@style/Common_Font_Style">
+        <item name="android:textSize">15.329987dip</item>
+        <item name="android:textColor">#fffe0101</item>
+    </style>
+    <style name="fontstyle_15_33_T6" parent="@style/Common_Font_Style">
+        <item name="android:textSize">15.329987dip</item>
+        <item name="android:textColor">#ff0090ff</item>
+    </style>
+    <style name="fontstyle_15t_gray_b">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#ff757575</item>
+    </style>
+    <style name="fontstyle_15t_gray_bk">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">#ff333333</item>
+    </style>
+    <style name="fontstyle_16_33_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.669983dip</item>
+        <item name="android:textColor">#ff5296fe</item>
+    </style>
+    <style name="fontstyle_16_67_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.669983dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_16_67_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.669983dip</item>
+        <item name="android:textColor">#ff5296fe</item>
+    </style>
+    <style name="fontstyle_16_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_16_T10" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff3d4451</item>
+    </style>
+    <style name="fontstyle_16_T11" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_16_T12" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#fffe0101</item>
+    </style>
+    <style name="fontstyle_16_T13" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff1181c9</item>
+    </style>
+    <style name="fontstyle_16_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff43aaf9</item>
+    </style>
+    <style name="fontstyle_16_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff9a9a9a</item>
+    </style>
+    <style name="fontstyle_16_T4" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff5296fe</item>
+    </style>
+    <style name="fontstyle_16_T5" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff1072de</item>
+    </style>
+    <style name="fontstyle_16_T6" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff0a4eb9</item>
+    </style>
+    <style name="fontstyle_16_T7" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff999999</item>
+    </style>
+    <style name="fontstyle_16_T8" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff8a8a8a</item>
+    </style>
+    <style name="fontstyle_16_T9" parent="@style/Common_Font_Style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff343434</item>
+    </style>
+    <style name="fontstyle_16_txt_black" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_17_33_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">17.329987dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_17_33_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">17.329987dip</item>
+        <item name="android:textColor">#ffbbc1ca</item>
+    </style>
+    <style name="fontstyle_17_33_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">17.329987dip</item>
+        <item name="android:textColor">#ff262626</item>
+    </style>
+    <style name="fontstyle_18_66_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">18.659973dip</item>
+        <item name="android:textColor">#ff1e2022</item>
+    </style>
+    <style name="fontstyle_18_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ff0f72d7</item>
+    </style>
+    <style name="fontstyle_18_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ff202329</item>
+    </style>
+    <style name="fontstyle_18_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">18.669983sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_20_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textColor">#ff202329</item>
+    </style>
+    <style name="fontstyle_20_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_20_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_20_T4" parent="@style/Common_Font_Style">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textColor">#ffbbc5d4</item>
+    </style>
+    <style name="fontstyle_20_bk_blue" parent="@style/Common_Font_Style">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textColor">#ff181b1f</item>
+    </style>
+    <style name="fontstyle_20_dark_blue" parent="@style/Common_Font_Style">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textColor">#ff29456b</item>
+    </style>
+    <style name="fontstyle_21_33_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">21.329987dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_21_33_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">21.329987dip</item>
+        <item name="android:textColor">#ff1e2022</item>
+    </style>
+    <style name="fontstyle_22_67_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">22.669983dip</item>
+        <item name="android:textColor">#ff5296fe</item>
+    </style>
+    <style name="fontstyle_22_67_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">22.669983dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_22_67_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">22.669983dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_24_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">24.0dip</item>
+        <item name="android:textColor">#ff3496f7</item>
+    </style>
+    <style name="fontstyle_24_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">24.0dip</item>
+        <item name="android:textColor">#ffff0000</item>
+    </style>
+    <style name="fontstyle_26_67_T1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">26.669983dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_26_67_T2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">26.669983dip</item>
+        <item name="android:textColor">#ff3496f7</item>
+    </style>
+    <style name="fontstyle_26_67_T3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">26.669983dip</item>
+        <item name="android:textColor">#ff2d353f</item>
+    </style>
+    <style name="fontstyle_8_widget_black">
+        <item name="android:textSize">8.0dip</item>
+        <item name="android:textColor">#66ffffff</item>
+        <item name="android:shadowDy">1.0</item>
+    </style>
+    <style name="fontstyle_9_widget_black">
+        <item name="android:textSize">9.0dip</item>
+        <item name="android:textColor">#ccffffff</item>
+    </style>
+    <style name="fontstyle_T11_33_set_gray" parent="@style/Common_Font_Style">
+        <item name="android:textSize">11.329987dip</item>
+        <item name="android:textColor">#ff828282</item>
+    </style>
+    <style name="fontstyle_T12_set_ex" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff828282</item>
+    </style>
+    <style name="fontstyle_T13_33_set_alarm" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">@drawable/selector_btn_set_table_font</item>
+    </style>
+    <style name="fontstyle_roundbox_left" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">@color/color_round_text_left_selector</item>
+    </style>
+    <style name="fontstyle_roundbox_right" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">@color/color_round_text_right_selector</item>
+    </style>
+    <style name="fontstyle_selector_btn_set" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@drawable/selector_btn_set_font</item>
+    </style>
+    <style name="fontstyle_selector_common_btn_1" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@drawable/selector_common_btn_1_font</item>
+    </style>
+    <style name="fontstyle_selector_common_btn_1_disable2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@drawable/selector_common_btn_1_font_disable2</item>
+    </style>
+    <style name="fontstyle_selector_common_btn_2" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@drawable/selector_common_btn_2_font</item>
+    </style>
+    <style name="fontstyle_selector_common_btn_3" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@drawable/selector_common_btn_3_font</item>
+        <item name="android:shadowColor">#ff1b7505</item>
+        <item name="android:shadowDy">1.0</item>
+    </style>
+    <style name="fontstyle_selector_common_btn_8" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@drawable/selector_common_btn_8_font</item>
+    </style>
+    <style name="fontstyle_setupmain_big_size">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@drawable/selector_setup_main_big_size_font</item>
+    </style>
+    <style name="fontstyle_setupmain_big_size_add_disable">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@drawable/selector_setup_main_big_size_font</item>
+    </style>
+    <style name="fontstyle_setupmain_noti_title_size">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff828282</item>
+        <item name="android:shadowDy">1.0</item>
+    </style>
+    <style name="fontstyle_setupmain_small_size">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ff999999</item>
+    </style>
+    <style name="fontstyle_setupmain_small_size_add_disable">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">@drawable/selector_setup_main_small_size_font</item>
+    </style>
+    <style name="fontstyle_setupmain_title_size">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff119716</item>
+    </style>
+    <style name="fontstyle_txt_2depth_000000" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_txt_2depth_ffffff" parent="@style/Common_Font_Style">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="fontstyle_txt_keyword" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff4f4f4f</item>
+    </style>
+    <style name="fontstyle_txt_realkey_num">
+        <item name="android:textSize">10.669983dip</item>
+        <item name="android:textColor">#ff989a9d</item>
+    </style>
+    <style name="fontstyle_txt_realkeyword" parent="@style/Common_Font_Style">
+        <item name="android:textSize">14.669983dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_txt_smartfinder" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    <style name="fontstyle_txt_title_ffffff" parent="@style/Common_Font_Style">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="fontstyle_txt_titlebar" parent="@style/Common_Font_Style">
+        <item name="android:textSize">13.329987dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+  
+    <style name="fontstyle_widget_realtime">
+        <item name="android:textSize">17.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#b2000000</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="fontstyle_widget_service_title">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    
+
+</resources>

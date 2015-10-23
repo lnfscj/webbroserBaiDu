@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    android:id="@+id/webtoolbar" 
+    android:padding="0.0dip" 
+    android:layout_width="fill_parent" 
+    android:layout_height="42.0dip"
+    android:visibility="gone"
+  	xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout 
+        android:gravity="center" 
+        android:orientation="horizontal" 
+        android:background="@drawable/url_bg_toolbar" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:baselineAligned="true" 
+        android:layout_centerInParent="true">
+        <LinearLayout 
+            android:gravity="center" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.0">
+            <ImageButton 
+                android:id="@+id/btn_home" 
+                android:background="@drawable/navi_btn_home_selector"  
+                android:layout_width="48.0dip" 
+                android:layout_height="30.669983dip" />
+        </LinearLayout>
+        <LinearLayout 
+            android:gravity="center" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.0">
+            <ImageButton 
+                android:id="@+id/btn_webtoolbar_back" 
+                android:background="@drawable/navi_btn_back_selector"  
+                android:layout_width="48.0dip" 
+                android:layout_height="30.669983dip" />
+        </LinearLayout>
+        <LinearLayout 
+            android:gravity="center" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.0">
+            <ImageButton 
+                android:id="@+id/btn_webtoolbar_front" 
+                android:background="@drawable/navi_btn_next_selector" 
+                android:layout_width="48.0dip" 
+                android:layout_height="30.669983dip"  />
+        </LinearLayout>
+        <RelativeLayout 
+            android:gravity="center" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.0">
+            <ImageButton 
+                android:id="@+id/btn_webtoolbar_refrash" 
+                android:background="@drawable/navi_btn_refresh_selector" 
+                android:visibility="invisible" 
+                android:layout_width="48.0dip" 
+                android:layout_height="30.669983dip"  />
+            <ImageButton 
+                android:id="@+id/btn_webtoolbar_pause" 
+                android:background="@drawable/navi_btn_cancel_selector" 
+                android:layout_width="48.0dip" 
+                android:layout_height="30.669983dip" />
+        </RelativeLayout>
+        <LinearLayout 
+            android:gravity="center" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.0">
+            <ImageButton 
+                android:id="@+id/btn_webtoolbar_bookmark" 
+                android:background="@drawable/navi_btn_bookmark_selector" 
+                android:layout_width="48.0dip" 
+                android:layout_height="30.669983dip"  />
+        </LinearLayout>
+        <LinearLayout 
+            android:gravity="center" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.0">
+            <ImageButton 
+                android:id="@+id/btn_webtoolbar_share" 
+                android:background="@drawable/navi_btn_share_selector" 
+                android:layout_width="48.0dip" 
+                android:layout_height="30.669983dip"  />
+        </LinearLayout>
+        <LinearLayout 
+            android:gravity="center" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_weight="1.0">
+            <ImageButton 
+                android:id="@+id/btn_webtoolbar_goapp" 
+                android:background="@drawable/navi_btn_more_selector" 
+                android:layout_width="48.0dip" 
+                android:layout_height="30.669983dip"  />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

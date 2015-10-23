@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Search</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+  	
+    
+    <string name="tab1">导航</string>
+    <string name="tab2">新闻</string>
+    <string name="tab3">小说</string>
+    <string name="tab4">购物</string>
+    <string name="tab5">游戏</string>
+    <string name="tab6">生活</string>
+    <string name="tab7">热搜</string>
+    <string name="tab8">彩票</string>
+    <string name="tab9">天气</string>
+    <string name="tab10">财经</string>
+    <string name="tab11">影视</string>
+
+
+
+</resources>

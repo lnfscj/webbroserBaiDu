@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/card_item_height" >
+
+    <FrameLayout 
+        android:id="@+id/screenShotFrame" 
+        android:background="#ffe0e0e0" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:layout_marginLeft="16.669983dip" 
+        android:layout_marginTop="23.329987dip" 
+        android:layout_marginRight="16.669983dip" 
+        android:layout_marginBottom="16.669983dip">
+        <ImageView 
+            android:id="@+id/screenShot" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"
+            android:src="@drawable/bg_01"
+             android:scaleType="matrix" />
+    </FrameLayout>
+    <LinearLayout 
+        android:orientation="horizontal" 
+        android:id="@+id/cardFrame" 
+        android:background="@drawable/openpage_img_window" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent">
+        <RelativeLayout 
+            android:id="@+id/titleAreaOnLandscape" 
+            android:visibility="gone" 
+            android:layout_width="fill_parent" 
+            android:layout_height="40.0dip"
+            android:layout_weight="2.0">
+            <Button 
+                android:id="@+id/closeButtonOnLandscape" 
+                android:background="@drawable/btn_openpage_close" 
+                android:layout_width="12.0dip" 
+                android:layout_height="12.0dip" 
+                android:layout_marginLeft="15.0dip" 
+                android:layout_marginRight="15.0dip" 
+                android:layout_alignParentLeft="true" 
+                android:layout_centerVertical="true" />
+            <TextView 
+                android:textSize="15.0dip" 
+                android:textColor="#ff424242" 
+                android:ellipsize="end" 
+                android:id="@+id/cardTitleOnLandscape" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                android:singleLine="true" 
+                android:layout_toRightOf="@id/closeButtonOnLandscape" 
+                android:layout_alignParentRight="true" 
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <View 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="2.0" />
+        <RelativeLayout 
+            android:id="@+id/titleArea" 
+            
+            android:layout_width="fill_parent" 
+            android:layout_height="40.0dip" 
+            android:layout_weight="1.0">
+            <Button 
+                android:id="@+id/closeButton" 
+                android:background="@drawable/btn_openpage_close" 
+                android:layout_width="12.0dip" 
+                android:layout_height="12.0dip" 
+                android:layout_marginLeft="6.669983dip" 
+                android:layout_marginRight="10.0dip" 
+                android:layout_alignParentRight="true" 
+                android:layout_centerVertical="true" />
+            <TextView 
+                android:textSize="15.0dip" 
+                android:textColor="#ff424242" 
+                android:ellipsize="end" 
+                android:id="@+id/cardTitle" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                android:singleLine="true" 
+                android:layout_toLeftOf="@id/closeButton" 
+                android:layout_alignParentLeft="true" 
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>
