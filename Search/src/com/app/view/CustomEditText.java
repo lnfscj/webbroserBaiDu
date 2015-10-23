@@ -32,7 +32,7 @@ public class CustomEditText extends EditText
  
 
     private void initImage() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub uuu
 		dEnd = context.getResources().getDrawable(R.drawable.url_img_refresh);
 	}
 	@Override
